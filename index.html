@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ngemilciouz - Catering Lezat untuk Setiap Moment Bahagiamu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            /* Updated gradient using colors from the logo: Orange and a lighter orange/yellow */
+            background: linear-gradient(135deg, #FF7F00 0%, #FFCC00 100%); /* Adjusted from logo */
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .shake {
+            animation: shake 0.5s ease-in-out;
+        }
+
+        .tab-content:not(.active) {
+            display: none;
+        }
+
+        .tab-btn:not(.active) {
+            background-color: transparent;
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-5px); }
+            40%, 80% { transform: translateX(5px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50 fade-in">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="flex items-center shake">
+                    <img src="Aset/Logo_Warna_1_-removebg-preview.png" alt="Ngemilciouz Logo" class="h-10"> </a>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-[#FF7F00] transition">Home</a>
+                <a href="#menu" class="text-gray-700 hover:text-[#FF7F00] transition">Menu</a>
+                <a href="#promo" class="text-gray-700 hover:text-[#FF7F00] transition">Promo</a>
+                <a href="#about" class="text-gray-700 hover:text-[#FF7F00] transition">Tentang Kami</a>
+                <a href="#contact" class="text-gray-700 hover:text-[#FF7F00] transition">Kontak</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <a href="#contact" class="hidden md:block bg-[#FF7F00] hover:bg-[#E67300] text-white px-4 py-2 rounded-full transition transform hover:scale-105">
+                    <i class="fas fa-phone-alt mr-2"></i> Pesan Sekarang
+                </a>
+                <button class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero-gradient pt-32 pb-20 fade-in">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                    Cemilan Lezat untuk <span class="text-[#FFCC00]">Setiap Moment</span> Spesialmu
+                </h1>
+                <p class="text-white text-lg mb-8">
+                    Ngemilciouz menyajikan berbagai pilihan makanan dan snack box berkualitas tinggi untuk acara spesial Anda. Dari ulang tahun hingga pernikahan, kami siap memanjakan lidah Anda.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#menu" class="bg-white text-[#FF7F00] hover:bg-gray-100 px-6 py-3 rounded-full font-medium text-center transition transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-book-open mr-2"></i> Lihat Menu
+                    </a>
+                    <a href="#promo" class="bg-[#FFCC00] hover:bg-[#E6B800] text-gray-800 px-6 py-3 rounded-full font-medium text-center transition transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-tags mr-2"></i> Promo Spesial
+                    </a>
+                </div>
+                
+                <div class="mt-10 flex items-center space-x-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-4 max-w-md">
+                    <div class="bg-white rounded-full p-3 flex items-center justify-center">
+                        <i class="fas fa-star text-[#FFCC00] text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-white font-medium">4.9/5.0</p>
+                        <p class="text-white text-sm">Rating dari 1200+ pelanggan puas</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 flex justify-center relative">
+                <div class="relative w-80 h-80 md:w-96 md:h-96 float">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=999&q=80" 
+                            alt="Burger Special" 
+                            class="absolute top-0 left-0 w-full h-full object-cover rounded-3xl shadow-2xl z-10">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="promo" class="py-12 bg-yellow-50">
+        <div class="container mx-auto px-4">
+            <div class="bg-gradient-to-r from-[#FF7F00] to-[#FFCC00] rounded-2xl p-1 pulse">
+                <div class="bg-white rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/3 mb-6 md:mb-0">
+                        <div class="inline-block bg-[#FFFBEB] text-[#FFCC00] text-sm font-medium px-3 py-1 rounded-full mb-3">
+                            <i class="fas fa-fire mr-1"></i> PROMO TERBATAS
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
+                            Dapatkan Diskon 30% untuk Pesanan Pertama!
+                        </h2>
+                        <p class="text-gray-600 mb-4">
+                            Gunakan kode <span class="font-bold text-[#FF7F00]">NGEMIL30</span> saat checkout dan dapatkan diskon 30% untuk semua menu dengan minimum order Rp 300.000.
+                        </p>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex items-center space-x-3 bg-gray-100 rounded-full px-4 py-2">
+                                <i class="fas fa-clock text-[#FF7F00]"></i>
+                                <span class="font-medium">Berlaku hingga 30 September 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/3 flex justify-center md:justify-end">
+                        <button class="bg-[#FF7F00] hover:bg-[#E67300] text-white px-6 py-3 rounded-full font-medium transition transform hover:scale-105 shadow-lg whitespace-nowrap">
+                            <i class="fas fa-ticket-alt mr-2"></i> Klaim Voucher
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Menu Catering Kami</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Nikmati berbagai pilihan makanan lezat yang dibuat dengan bahan berkualitas dan penuh cinta oleh chef profesional kami.
+                </p>
+            </div>
+            
+            <div class="flex justify-center mb-8">
+                <div class="inline-flex rounded-full bg-gray-100 p-1">
+                    <button class="tab-btn active px-5 py-2 rounded-full font-medium text-gray-800 bg-white shadow transform transition duration-300 hover:scale-105" data-tab="rice-box">
+                        Rice Box
+                    </button>
+                    <button class="tab-btn px-5 py-2 rounded-full font-medium text-gray-600 transform transition duration-300 hover:scale-105" data-tab="snack-box">
+                        Snack Box
+                    </button>
+                    <button class="tab-btn px-5 py-2 rounded-full font-medium text-gray-600 transform transition duration-300 hover:scale-105" data-tab="snack">
+                        Snack
+                    </button>
+                </div>
+            </div>
+
+            <div class="tab-content active grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="rice-box">
+                <div class="rice-box-item bg-white rounded-xl shadow-lg overflow-hidden card-hover transition-all duration-300">
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
+                                alt="Makanan Utama"
+                                class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">Makanan Utama</h3>
+                            <div class="bg-[#FFEDE1] text-[#FF7F00] px-3 py-1 rounded-full text-sm font-medium">
+                                Rp 35.000/porsi
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Nikmati hidangan utama lezat dengan berbagai pilihan seperti nasi kuning, nasi uduk, atau paket prasmanan. Setiap menu dilengkapi dengan lauk pilihan dan sayuran segar.
+                        </p>
+                        <ul class="text-sm text-gray-600 mb-4 space-y-1">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[#FF7F00] mr-2"></i>
+                                Pilihan menu harian bervariasi
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[#FF7F00] mr-2"></i>
+                                Bahan segar dan higienis
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[#FF7F00] mr-2"></i>
+                                Minimum order 10 porsi
+                            </li>
+                        </ul>
+                        <button onclick="orderItem('Makanan Utama', 'Rp 35.000/porsi', 'Nikmati hidangan utama lezat dengan berbagai pilihan seperti nasi kuning, nasi uduk, atau paket prasmanan. Setiap menu dilengkapi dengan lauk pilihan dan sayuran segar.')" class="w-full bg-[#FF7F00] hover:bg-[#E67300] text-white py-2 rounded-lg transition flex items-center justify-center">
+                            <i class="fab fa-whatsapp mr-2"></i> Pesan via WhatsApp
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="snack-box-item bg-white rounded-xl shadow-lg overflow-hidden card-hover transition-all duration-300" style="display: none;">
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=927&q=80" 
+                                alt="Snack Box"
+                                class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">Snack Box Premium</h3>
+                            <div class="bg-[#FFEDE1] text-[#FF7F00] px-3 py-1 rounded-full text-sm font-medium">
+                                Rp 75.000/box
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Snack box eksklusif berisi 5 jenis kue tradisional dan modern, 2 jenis minuman, serta buah segar. Sempurna untuk rapat, gathering, atau acara keluarga.
+                        </p>
+                        <ul class="text-sm text-gray-600 mb-4 space-y-1">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[#FF7F00] mr-2"></i>
+                                Desain kustom sesuai tema acara
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[#FF7F00] mr-2"></i>
+                                Kemasan mewah dan elegan
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[#FF7F00] mr-2"></i>
+                                Minimum order 5 box
+                            </li>
+                        </ul>
+                        <button class="w-full bg-[#FF7F00] hover:bg-[#E67300] text-white py-2 rounded-lg transition flex items-center justify-center">
+                            <i class="fas fa-shopping-cart mr-2"></i> Tambah Ke Keranjang
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="snack-item bg-white rounded-xl shadow-lg overflow-hidden card-hover transition-all duration-300" style="display: none;">
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" 
+                                alt="Snack Rigan"
+                                class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">Snack Rigan</h3>
+                            <div class="bg-[#FFEDE1] text-[#FF7F00] px-3 py-1 rounded-full text-sm font-medium">
+                                Rp 35.000/box
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Pilihan praktis snack ringan untuk segala acara. Tersedia dalam berbagai varian dengan isian yang mengenyangkan namun tetap ringan di kantong.
+                        </p>
+                        <ul class="text-sm text-gray-600 mb-4 space-y-1">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[#FF7F00] mr-2"></i>
+                                3 jenis kue dalam satu kemasan
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[#FF7F00] mr-2"></i>
+                                Bisa dikombinasikan sesuai selera
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[#FF7F00] mr-2"></i>
+                                Minimum order 10 box
+                            </li>
+                        </ul>
+                        <button class="w-full bg-[#FF7F00] hover:bg-[#E67300] text-white py-2 rounded-lg transition flex items-center justify-center">
+                            <i class="fas fa-shopping-cart mr-2"></i> Tambah Ke Keranjang
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <button class="bg-white border-2 border-[#FF7F00] text-[#FF7F00] hover:bg-[#FFFBEB] px-6 py-3 rounded-full font-medium transition transform hover:scale-105">
+                    <i class="fas fa-list mr-2"></i> Lihat Semua Menu
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Kata Pelanggan Kami</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Dengarkan apa yang pelanggan kami katakan tentang pengalaman mereka bersama Ngemilciouz.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="text-[#FFCC00] text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-500 text-sm">3 minggu lalu</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        "Snack box untuk acara kantor kami sangat memuaskan! Kemasannya rapi dan makanannya lezat. Staf juga ramah dan profesional. Pasti akan order lagi!"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah J." class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Sarah J.</h4>
+                            <p class="text-gray-600 text-sm">HR Manager - PT Maju Jaya</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="text-[#FFCC00] text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-500 text-sm">1 bulan lalu</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        "Makanan utama untuk acara keluarga sangat enak dan penyajiannya higienis. Harganya juga terjangkau untuk kualitas yang diberikan. Recommended banget!"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Budi K." class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Budi K.</h4>
+                            <p class="text-gray-600 text-sm">Acara Keluarga Besar</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="text-[#FFCC00] text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-gray-500 text-sm">2 minggu lalu</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        "Pesan snack rigan untuk acara arisan. Semua anggota suka! Kemasan simple tapi isinya banyak dan enak-enak. Next mau coba menu lainnya."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Dewi L." class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Dewi L.</h4>
+                            <p class="text-gray-600 text-sm">Ibu Rumah Tangga</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 hero-gradient">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Siap Memesan Hidangan Lezat untuk Acaramu?</h2>
+            <p class="text-white text-lg max-w-2xl mx-auto mb-8">
+                Pesan sekarang dan dapatkan pengalaman kuliner yang tak terlupakan bersama Ngemilciouz. Kami siap melayani Anda dengan sepenuh hati.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="https://wa.me/6281234567890" class="bg-white text-[#FF7F00] hover:bg-gray-100 px-8 py-4 rounded-full font-bold text-lg transition transform hover:scale-105 shadow-lg flex items-center justify-center">
+                    <i class="fab fa-whatsapp text-xl mr-2"></i> Chat via WhatsApp
+                </a>
+                <a href="tel:+6281234567890" class="bg-[#FFCC00] hover:bg-[#E6B800] text-gray-800 px-8 py-4 rounded-full font-bold text-lg transition transform hover:scale-105 shadow-lg flex items-center justify-center">
+                    <i class="fas fa-phone-alt text-xl mr-2"></i> Telepon Kami
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Cerita di Balik Ngemilciouz</h2>
+                    <p class="text-gray-600 mb-6">
+                        Ngemilciouz dimulai dari kecintaan kami terhadap makanan dan keinginan untuk berbagi kebahagiaan melalui hidangan lezat. Sejak 2015, kami telah melayani ribuan pelanggan dengan penuh dedikasi dan cinta.
+                    </p>
+                    <p class="text-gray-600 mb-8">
+                        Kami percaya bahwa setiap gigitan makanan yang lezat bisa menciptakan momen bahagia. Itulah mengapa kami sangat memperhatikan kualitas bahan, teknik memasak, dan penyajian untuk memberikan pengalaman terbaik bagi pelanggan kami.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="bg-[#FFEDE1] p-4 rounded-lg">
+                            <div class="text-[#FF7F00] text-2xl mb-2">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800 mb-1">100% Halal</h3>
+                            <p class="text-sm text-gray-600">Sertifikat MUI</p>
+                        </div>
+                        <div class="bg-[#FFEDE1] p-4 rounded-lg">
+                            <div class="text-[#FF7F00] text-2xl mb-2">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800 mb-1">10+ Tahun</h3>
+                            <p class="text-sm text-gray-600">Pengalaman</p>
+                        </div>
+                    </div>
+                    <button class="bg-[#FF7F00] hover:bg-[#E67300] text-white px-6 py-3 rounded-full font-medium transition flex items-center">
+                        <i class="fas fa-info-circle mr-2"></i> Pelajari Lebih Lanjut
+                    </button>
+                </div>
+                
+                <div class="md:w-1/2 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-xl overflow-hidden h-48 relative">
+                            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" 
+                                    alt="Chef Ngemilciouz"
+                                    class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden h-48 relative">
+                            <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                    alt="Dapur Ngemilciouz"
+                                    class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden h-48 relative">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1981&q=80" 
+                                    alt="Makanan Ngemilciouz"
+                                    class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden h-48 relative">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                    alt="Bahan Ngemilciouz"
+                                    class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Hubungi Kami</h2>
+                    <p class="text-lg text-gray-600">
+                        Punya pertanyaan atau ingin memesan catering untuk acara Anda? Tim kami siap membantu!
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <div class="p-8 md:p-10 bg-[#FF7F00] text-white">
+                            <h3 class="text-2xl font-bold mb-6">Informasi Kontak</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="text-xl mr-4 mt-1">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold mb-1">Alamat</h4>
+                                        <p>Jl. Kemakmuran No. 123, Jakarta Selatan</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="text-xl mr-4 mt-1">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold mb-1">Telepon</h4>
+                                        <p>(021) 12345678 | 0812-3456-7890</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="text-xl mr-4 mt-1">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold mb-1">Email</h4>
+                                        <p>info@ngemilciouz.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="text-xl mr-4 mt-1">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold mb-1">Jam Operasional</h4>
+                                        <p>Senin - Sabtu: 08.00 - 20.00 WIB</p>
+                                        <p>Minggu: 10.00 - 16.00 WIB</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="pt-4">
+                                    <h4 class="font-bold mb-3">Ikuti Kami</h4>
+                                    <div class="flex space-x-4">
+                                        <a href="#" class="text-white hover:text-[#FFEDE1] text-xl transition">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="#" class="text-white hover:text-[#FFEDE1] text-xl transition">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                        <a href="#" class="text-white hover:text-[#FFEDE1] text-xl transition">
+                                            <i class="fab fa-tiktok"></i>
+                                        </a>
+                                        <a href="#" class="text-white hover:text-[#FFEDE1] text-xl transition">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="p-8 md:p-10">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">Kirim Pesan</h3>
+                            <form id="contactForm">
+                                <div class="mb-4">
+                                    <label for="name" class="block text-gray-700 mb-2">Nama Anda</label>
+                                    <input type="text" id="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF7F00] focus:border-[#FF7F00] outline-none transition">
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="phone" class="block text-gray-700 mb-2">Nomor WhatsApp</label>
+                                    <input type="tel" id="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF7F00] focus:border-[#FF7F00] outline-none transition">
+                                </div>
+                                
+                                <div class="mb-6">
+                                    <label for="message" class="block text-gray-700 mb-2">Detail Pesanan</label>
+                                    <textarea id="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF7F00] focus:border-[#FF7F00] outline-none transition"></textarea>
+                                </div>
+                                
+                                <button type="button" onclick="sendToWhatsApp()" class="w-full bg-[#FF7F00] hover:bg-[#E67300] text-white py-3 rounded-lg font-medium transition flex items-center justify-center">
+                                    <i class="fab fa-whatsapp mr-2"></i> Kirim via WhatsApp
+                                </button>
+                            </form>
+                            <script>
+                                function sendToWhatsApp() {
+                                    const name = document.getElementById('name').value;
+                                    const phone = document.getElementById('phone').value;
+                                    const message = document.getElementById('message').value;
+                                    
+                                    if (!name || !phone || !message) {
+                                        alert('Harap isi semua field!');
+                                        return;
+                                    }
+                                    
+                                    const encodedMessage = encodeURIComponent(`Halo Ngemilciouz!\n\nNama: ${name}\nNo. WA: ${phone}\n\nPesanan:\n${message}\n\nMohon info ketersediaan dan total harganya. Terima kasih!`);
+                                    window.open(`https://wa.me/6287832790334?text=${encodedMessage}`, '_blank');
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/6287832790334" class="fixed bottom-6 right-6 bg-[#3CB371] hover:bg-[#2E8B57] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-xl transition transform hover:scale-110 z-50 pulse">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="flex items-center mb-4">
+                        <img src="Logo Warna.jpg" alt="Ngemilciouz Logo" class="h-10"> </a>
+                    <p class="text-gray-400">
+                        Catering profesional yang menyajikan berbagai pilihan makanan lezat untuk setiap moment spesial Anda.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#menu" class="text-gray-400 hover:text-white transition">Menu</a></li>
+                        <li><a href="#promo" class="text-gray-400 hover:text-white transition">Promo</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">Tentang Kami</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Layanan</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Makanan Utama</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Snack Box</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Snack Rigan</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Paket Pernikahan</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Katering Harian</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Berlangganan</h3>
+                    <p class="text-gray-400 mb-4">
+                        Dapatkan promo dan penawaran spesial langsung ke email Anda.
+                    </p>
+                    <div class="flex">
+                        <input type="email" placeholder="Email Anda" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
+                        <button class="bg-[#FF7F00] hover:bg-[#E67300] px-4 py-2 rounded-r-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="font-medium mb-2">Pembayaran</h4>
+                        <div class="flex space-x-2">
+                            <div class="bg-white p-2 rounded">
+                                <i class="fab fa-cc-visa text-blue-500 text-xl"></i>
+                            </div>
+                            <div class="bg-white p-2 rounded">
+                                <i class="fab fa-cc-mastercard text-red-500 text-xl"></i>
+                            </div>
+                            <div class="bg-white p-2 rounded">
+                                <i class="fab fa-cc-paypal text-blue-400 text-xl"></i>
+                            </div>
+                            <div class="bg-white p-2 rounded">
+                                <i class="fas fa-money-bill-wave text-green-500 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-2 md:mb-0">
+                    &copy; 2023 Ngemilciouz. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Update active tab
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active', 'bg-white', 'shadow', 'text-gray-800'));
+                this.classList.add('active', 'bg-white', 'shadow', 'text-gray-800');
+                this.classList.remove('text-gray-600');
+                
+                // Hide all content
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                    content.style.display = 'none';
+                });
+                
+                // Show selected content
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+                document.getElementById(tabId).style.display = 'grid';
+            });
+        });
+
+        // Simple animation trigger on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animatedElements.forEach(element => {
+                element.style.opacity = 0;
+                observer.observe(element);
+            });
+            
+            // Shake effect after page load
+            setTimeout(() => {
+                const logo = document.querySelector('header a');
+                logo.classList.add('shake');
+                
+                setTimeout(() => {
+                    logo.classList.remove('shake');
+                }, 1000);
+            }, 1500);
+            
+            // Navigation scroll effect
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        function orderItem(itemName, price, description) {
+            const encodedMessage = encodeURIComponent(`Halo Ngemilciouz!\n\nSaya ingin memesan:\n\n*${itemName}* (${price})\n\n${description}\n\nMohon info ketersediaan dan total harga untuk 10 porsi. Terima kasih!`);
+            window.open(`https://wa.me/6287832790334?text=${encodedMessage}`, '_blank');
+        }
+    </script>
+</body>
+</html>
